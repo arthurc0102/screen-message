@@ -107,27 +107,27 @@
 			window.location.hash = href;
 		}
 
-		function showBox() {
-			opacity = 100;
-			window.clearTimeout(timeout);
-			setOpacity();
-		}
+		// function showBox() {
+		// 	opacity = 100;
+		// 	window.clearTimeout(timeout);
+		// 	setOpacity();
+		// }
 
-		function fadeOut() {
-			opacity *= 0.985;
-			if (opacity > 1) {
-				timeout = window.setTimeout("fadeOut()", 20);
-			} else {
-				opacity = 0;
-			}
-			setOpacity();
-		}
+		// function fadeOut() {
+		// 	opacity *= 0.985;
+		// 	if (opacity > 1) {
+		// 		timeout = window.setTimeout("fadeOut()", 20);
+		// 	} else {
+		// 		opacity = 0;
+		// 	}
+		// 	setOpacity();
+		// }
 
-		function setOpacity() {
-			about = document.getElementById("about");
-			about.style.opacity = opacity / 100;
-			about.style.filter = "alpha(opacity=" + Math.round(opacity) + ")";
-		}
+		// function setOpacity() {
+		// 	about = document.getElementById("about");
+		// 	about.style.opacity = opacity / 100;
+		// 	about.style.filter = "alpha(opacity=" + Math.round(opacity) + ")";
+		// }
 
 		function parseHash() {
 			ta = document.getElementById("textarea");
@@ -148,8 +148,8 @@
 				ta.style.backgroundColor = queryString['b'];
 			}
 			adjust();
-			timeout = window.setTimeout("fadeOut();", 1000);
-			setOpacity();
+			// timeout = window.setTimeout("fadeOut();", 1000);
+			// setOpacity();
 		}
 
 		function init() {
@@ -167,7 +167,7 @@
 <body onload="init()" onhashchange="parseHash()" onresize="adjust()">
 	<textarea id="textarea" onKeyUp="adjust()" onpaste="adjust()" oninput="adjust()">:-)</textarea>
 	<span id="test"></span>
-	<div id="about" onMouseOver="showBox()" onMouseOut="fadeOut()">
+	<!-- <div id="about" onMouseOver="showBox()" onMouseOut="fadeOut()">
 		<p>
 			This is an online-version of the program <strong>screen-message</strong> for Linux.
 		</p>
@@ -181,7 +181,7 @@
 			<strong>screen-message</strong> was created by <a href="http://www.joachim-breitner.de/">Joachim Breitner</a>. If you
 			like it, then <a href="http://flattr.com/thing/330186/screen-message" target="_blank">flattr this</a>.
 		</p>
-	</div>
+	</div> -->
 </body>
 
 </html>
